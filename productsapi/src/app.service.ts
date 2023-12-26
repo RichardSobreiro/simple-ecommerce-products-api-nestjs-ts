@@ -2,8 +2,8 @@ import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class AppService {
-  createProduct(): string {
-    return 'Create Product!';
+  createProduct(body: any): string {
+    return `Create Product: ${body}`;
   }
 
   getProductById(productId: string): any {

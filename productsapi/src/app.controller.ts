@@ -1,4 +1,5 @@
 import {
+  Body,
   Controller,
   Delete,
   Get,
@@ -10,14 +11,14 @@ import {
 } from '@nestjs/common';
 import { AppService } from './app.service';
 
-@Controller()
+@Controller('/v1')
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Post()
   @HttpCode(201)
-  createProduct(): string {
-    return this.appService.createProduct();
+  createProduct(@Body() body: any): string {
+    return this.appService.createProduct(body);
   }
 
   @Get('/:productId')
