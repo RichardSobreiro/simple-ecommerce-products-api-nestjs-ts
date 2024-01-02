@@ -2,7 +2,7 @@
 
 # REST API using Nest.js and Typescript
 
-An example REST API using Nest.js and Typescript.
+An example REST API using Nest.js, gRPC, Camunda, and Typescript.
 
 ## Creating a Nest.js Project
 
